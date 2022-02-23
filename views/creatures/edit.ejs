@@ -1,0 +1,10 @@
+<form action="/prehistoric_creatures/<%=dinoId%>/?_method=PUT" method="POST">
+    <!-- to stack better put inside divs -->
+    <div>
+        <label for="creatureType" >Name:</label>
+        <input type="text" name="creatureType" id="creatureType" value="<%=dino.type%>">
+    </div>
+  
+        <button type="submit">Update this Dino!</button>
+    
+    </form>

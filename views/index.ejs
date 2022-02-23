@@ -1,5 +1,22 @@
+<form action="/dinosaurs" method="get">
+    <label for="nameFilter" >Filter by Name:</label>
+    <input type="text" name="nameFilter" id="nameFilter">
+    <button type="submit"> Filter Results</button>
+</form>
+<div>
+<a href="/dinosaurs/new">Add a new Dino</a>
+</div>
+<div>
+<a href="/prehistoric_creatures">See Creatures</a>
+</div>
+
 <ul>
-    <% myDinos.forEach(dino=>{ %>
-    <li><%= dino.name %> is a <%= dino.type %></li>
+    <% myDinos.forEach((dino,i)=>{ %>
+    <li> 
+        <%= dino.name %> is a <%= dino.type %>
+        <form action="/dinosaurs/<%=i%>/?_method=DELETE" method="post">
+            <button type="submit"> Extinct this!</button>
+        </form>
+    </li>
     <% }) %> 
 </ul>

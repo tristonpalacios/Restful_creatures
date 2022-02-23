@@ -1,0 +1,21 @@
+<form action="/prehistoric_creatures" method="get">
+    <label for="nameFilter" >Filter by Name:</label>
+    <input type="text" name="nameFilter" id="nameFilter">
+    <button type="submit"> Filter Results</button>
+</form>
+
+<a href="/prehistoric_creatures/new">Add a new Creature</a>
+
+<div>
+    <a href="/dinosaurs">See Dinos</a>
+    </div>
+
+<ul>
+    <% myCreatures.forEach((dino,i)=>{ %>
+    <li>A <%= dino.type %> looks like <br> <img src="<%=dino.img_url%>" alt="" height="200px" width="200px"></li>
+
+        <form action="/prehistoric_creatures/<%=i%>/?_method=DELETE" method="post">
+            <button type="submit"> Extinct this!</button>
+        </form>
+    <% }) %> 
+</ul>

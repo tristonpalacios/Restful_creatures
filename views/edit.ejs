@@ -1,0 +1,13 @@
+<form action="/dinosaurs/<%=dinoId%>/?_method=PUT" method="POST">
+    <!-- to stack better put inside divs -->
+    <div>
+        <label for="dinosaurName" >Name:</label>
+        <input type="text" name="name" id="dinosaurType" value="<%=dino.name%>">
+    </div>
+    <div>
+        <label for="dinosaurType" >Type:</label>
+        <input type="text" name="type" id="dinosaurType" value="<%=dino.type%>">
+    </div>
+        <button type="submit">Update this Dino!</button>
+    
+    </form>
